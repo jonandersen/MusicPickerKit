@@ -15,7 +15,7 @@ public class Task<T> {
     internal var onCancel: (() -> ())? = nil
     private var completionHandler: CompletionHandler<T>!
     
-    init(completionHandler: @escaping CompletionHandler<T>) {
+    public init(completionHandler: @escaping CompletionHandler<T>) {
         self.completionHandler = { [weak self] url, error in
             guard let self = self else { return }
             if(self.isCancelled){
@@ -27,11 +27,11 @@ public class Task<T> {
         }
     }
     
-    func complete(with result: T){
+    public func complete(with result: T){
         completionHandler(result, nil)
     }
     
-    func fail(with error: Error){
+    public func fail(with error: Error){
         completionHandler(nil, error)
     }
     
