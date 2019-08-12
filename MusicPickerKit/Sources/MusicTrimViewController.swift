@@ -14,11 +14,11 @@ import UIKit
 internal let bundle = Bundle(for: MusicTrimViewController.classForCoder())
 
 protocol MusicTrimViewControllerDelegate: class {
-    func didFinishTrimming(musicItem: MusicTrackTrimItem)
+    func didFinishTrimming(musicItem: MusicTrackItem)
 }
 
 class MusicTrimViewController: UIViewController, FDWaveformViewDelegate, UIScrollViewDelegate {
-    var trimItem: MusicTrackTrimItem!
+    var trimItem: MusicTrackTrimInformation!
     private var musicItem : MusicTrackValue {
         get {
             return trimItem.value
@@ -39,6 +39,7 @@ class MusicTrimViewController: UIViewController, FDWaveformViewDelegate, UIScrol
     private let playImage = Asset.Images.play.image
     private let pauseImage = Asset.Images.pause.image
 
+    private var url: URL?
     private var player: AVPlayer?
     private var timeObserver: AnyObject?
     private var duration: Double = 0
@@ -115,6 +116,7 @@ class MusicTrimViewController: UIViewController, FDWaveformViewDelegate, UIScrol
 
         musicItem.fetchAssetUrl { [weak self] (url, error) in
             if let url = url {
+                self?.url = url
                 self?.player = AVPlayer(url: url)
                 self?.waveView.audioURL = url
                 self?.configurePeriodicTimeObserving()
@@ -194,7 +196,10 @@ class MusicTrimViewController: UIViewController, FDWaveformViewDelegate, UIScrol
     }
 
     @IBAction func useOnTap(_: UIBarButtonItem) {
-        delegate?.didFinishTrimming(musicItem: MusicTrackTrimItem(value: musicItem, volume: Double(volume), start: startTime, end: endTime))
+        if let url = url {
+            let trim = MusicTrackTrimInformation(value: musicItem, volume: Double(volume), start: startTime, end: endTime)
+            delegate?.didFinishTrimming(musicItem: MusicTrackItem(assset: AVURLAsset(url: url), trimInformation: trim))
+        }
         self.dismiss(animated: true, completion: nil)
     }
 

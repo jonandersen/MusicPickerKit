@@ -13,14 +13,14 @@ class MusicPickerTableViewCell: UITableViewCell {
     @IBOutlet var songLabel: UILabel!
     @IBOutlet var thumbnailImageView: UIImageView!
 
-    var musicItem: MusicTrackTrimItem! {
+    var musicItem: MusicTrackValue! {
         didSet {
-            musicItem.value.fetchImage(size: self.thumbnailImageView.frame.size) { [weak self] image in
+            musicItem.fetchImage(size: self.thumbnailImageView.frame.size) { [weak self] image in
                 self?.thumbnailImageView.image = image
             }
-            let albumArtist = musicItem.value.albumArtist
-            let albumTitle = musicItem.value.albumTitle
-            let title = musicItem.value.title ?? ""
+            let albumArtist = musicItem.albumArtist
+            let albumTitle = musicItem.albumTitle
+            let title = musicItem.title ?? ""
             let text = [albumArtist, albumTitle].compactMap { $0 }.joined(separator: "-")
             albumArtistLabel.text = text
             songLabel.text = title

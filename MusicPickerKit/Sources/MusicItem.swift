@@ -10,8 +10,8 @@ import Foundation
 import MediaPlayer
 import Photos
 
-public struct MusicTrackTrimItem: Equatable {
-    public let value: MusicTrackValue
+public struct MusicTrackTrimInformation: Equatable {
+    let value: MusicTrackValue
     public let volume: Double
     public let start: Double?
     public let end: Double?
@@ -25,9 +25,23 @@ public struct MusicTrackTrimItem: Equatable {
         self.start = start
         self.end = end
     }
-    public static func == (lhs: MusicTrackTrimItem, rhs: MusicTrackTrimItem) -> Bool {
+    public static func == (lhs: MusicTrackTrimInformation, rhs: MusicTrackTrimInformation) -> Bool {
         return lhs.value.identifier == rhs.value.identifier && lhs.volume == rhs.volume &&
             lhs.start == rhs.start && lhs.end == rhs.end
+    }
+}
+
+public struct MusicTrackItem: Equatable {
+    public let assset: AVURLAsset
+    public let trimInformation: MusicTrackTrimInformation
+    
+    public init(assset: AVURLAsset,
+                trimInformation: MusicTrackTrimInformation) {
+        self.assset = assset
+        self.trimInformation = trimInformation
+    }
+    public static func == (lhs: MusicTrackItem, rhs: MusicTrackItem) -> Bool {
+        return lhs.assset == rhs.assset && lhs.trimInformation == rhs.trimInformation
     }
 }
 

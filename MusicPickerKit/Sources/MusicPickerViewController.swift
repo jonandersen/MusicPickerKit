@@ -12,7 +12,7 @@ import MediaPlayer
 public protocol MusicPickerViewControllerDelegate: class {
     func musicPickerViewControllerHasPremiumAccess(_ viewController: MusicPickerViewController) -> Bool
     func musicPickerViewController(_ viewController: MusicPickerViewController, grantPremiumAccess: @escaping ((Bool) -> ()))
-    func musicPickerViewController(_ viewController: MusicPickerViewController, didPickItems musicItems: [MusicTrackTrimItem])
+    func musicPickerViewController(_ viewController: MusicPickerViewController, didPickItems musicItems: [MusicTrackItem])
 }
 
 public class MusicPickerViewController: UIViewController {
@@ -22,7 +22,7 @@ public class MusicPickerViewController: UIViewController {
     private var mediaImporter: MediaImporter = MediaImporter()
 
     
-    public class func pickMusic(musicItems: [MusicTrackTrimItem], delegate: MusicPickerViewControllerDelegate?) -> UIViewController {
+    public class func pickMusic(musicItems: [MusicTrackItem], delegate: MusicPickerViewControllerDelegate?) -> UIViewController {
         let navigationController = StoryboardScene.Main.initialScene.instantiate()
         let viewController = navigationController.viewControllers.first as! MusicPickerViewController
         viewController.musicItems = musicItems
@@ -30,7 +30,7 @@ public class MusicPickerViewController: UIViewController {
         return navigationController
     }
 
-    var musicItems: [MusicTrackTrimItem] = []
+    var musicItems: [MusicTrackItem] = []
 
     @IBOutlet var tableView: UITableView!
 
@@ -46,7 +46,7 @@ public class MusicPickerViewController: UIViewController {
         navigationItem.setLeftBarButton(cancelBarButton, animated: false)
     }
 
-    func addMusicItem(musicItem: MusicTrackTrimItem) {
+    func addMusicItem(musicItem: MusicTrackItem) {
         tableView.beginUpdates()
         let indexPath = IndexPath(row: musicItems.count, section: 0)
         musicItems.append(musicItem)
@@ -77,7 +77,7 @@ extension MusicPickerViewController: UITableViewDataSource, UITableViewDelegate 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MusicPickerTableViewCell", for: indexPath) as! MusicPickerTableViewCell
-            cell.musicItem = musicItems[indexPath.row]
+            cell.musicItem = musicItems[indexPath.row].trimInformation.value
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MusicPickerAddTableViewCell", for: indexPath) as! MusicPickerAddTableViewCell
@@ -98,7 +98,7 @@ extension MusicPickerViewController: UITableViewDataSource, UITableViewDelegate 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 0 {
-            trim(musicTrack: musicItems[indexPath.row])
+            trim(musicTrack: musicItems[indexPath.row].trimInformation)
         } else {
             let importAction: (() -> Void)
             if indexPath.row == 0 {
@@ -132,9 +132,7 @@ extension MusicPickerViewController: UITableViewDataSource, UITableViewDelegate 
         mediaImporter.importType = .video
         let picker = mediaImporter.pick { [weak self] asset in
             if let asset = asset {
-                let trimItem = MusicTrackTrimItem(value: asset)
-                self?.addMusicItem(musicItem: trimItem)
-                self?.trim(musicTrack: trimItem)
+                self?.trim(musicTrack: MusicTrackTrimInformation(value: asset))
             }
         }
         picker.modalPresentationStyle = .overFullScreen
@@ -142,10 +140,14 @@ extension MusicPickerViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
 
-    func didEdit(musicItem: MusicTrackTrimItem) {
-        musicItems.firstIndex(where: { (item) -> Bool in
-            item.value.identifier == musicItem.value.identifier
-        }).map { musicItems[$0] = musicItem }
+    func didEdit(musicItem: MusicTrackItem) {
+        if let existingItemIndex = musicItems.firstIndex(where: { (item: MusicTrackItem) -> Bool in
+            musicItem.trimInformation.value.identifier == item.trimInformation.value.identifier
+        }) {
+            musicItems[existingItemIndex] = musicItem
+        } else {
+            addMusicItem(musicItem: musicItem)
+        }
     }
 
     public func tableView(_: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -164,7 +166,7 @@ extension MusicPickerViewController: UITableViewDataSource, UITableViewDelegate 
 
 
 extension MusicPickerViewController: MusicTrimViewControllerDelegate {
-    func didFinishTrimming(musicItem: MusicTrackTrimItem) {
+    func didFinishTrimming(musicItem: MusicTrackItem) {
         didEdit(musicItem: musicItem)
     }
 }
@@ -200,8 +202,7 @@ extension MusicPickerViewController: MPMediaPickerControllerDelegate {
                 alertController.addAction(defaultAction)
                 mediaPicker.present(alertController, animated: true, completion: nil)
             } else if let _ = mediaItem.assetURL {
-                let trimItem = MusicTrackTrimItem(value: mediaItem)
-                addMusicItem(musicItem: trimItem)
+                let trimItem = MusicTrackTrimInformation(value: mediaItem)
                 mediaPicker.dismiss(animated: true, completion: {
                     self.trim(musicTrack: trimItem)
                 })
@@ -213,7 +214,7 @@ extension MusicPickerViewController: MPMediaPickerControllerDelegate {
         }
     }
     
-    private func trim(musicTrack: MusicTrackTrimItem){
+    private func trim(musicTrack: MusicTrackTrimInformation){
         let trimNavigationController = StoryboardScene.Main.musicTrimNavigationViewController.instantiate()
         let viewController = trimNavigationController.viewControllers.first as! MusicTrimViewController
         viewController.trimItem = musicTrack
