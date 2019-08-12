@@ -10,7 +10,7 @@ import Foundation
 import MediaPlayer
 import Photos
 
-public struct MusicTrackTrimItem {
+public struct MusicTrackTrimItem: Equatable {
     public let value: MusicTrackValue
     public let volume: Double
     public let start: Double?
@@ -24,6 +24,10 @@ public struct MusicTrackTrimItem {
         self.volume = volume
         self.start = start
         self.end = end
+    }
+    public static func == (lhs: MusicTrackTrimItem, rhs: MusicTrackTrimItem) -> Bool {
+        return lhs.value.identifier == rhs.value.identifier && lhs.volume == rhs.volume &&
+            lhs.start == rhs.start && lhs.end == rhs.end
     }
 }
 
