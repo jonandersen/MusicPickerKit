@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'MusicPickerKit/Sources/**/*'
   
   s.resource_bundles = {
-    'MusicPickerKit' => ['Resources/**/*']
+    'MusicPickerKit' => ['MusicPickerKit/Resources/**/*']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
