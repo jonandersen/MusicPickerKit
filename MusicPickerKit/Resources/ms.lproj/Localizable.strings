@@ -1,0 +1,13 @@
+"general.addMusic" = "Tambah Muzik";
+"general.music" = "Muzik";
+"music.app_open" = "Buka aplikasi Muzik";
+"music.download.description" = "Lagu yang anda pilih tidak tersedia dalam peranti anda. Untuk menggunakannya anda perlu memuat turun terlebih dahulu ke peranti anda daripada Aplikasi Muzik anda";
+"music.download.title" = "Muat turun daripada iCloud";
+"music.photos.import" = "Import daripada foto";
+"music.song_unavailable.description" = "Lagu yang anda pilih tidak boleh digunakan memandangkan ia dilindungi oleh DRM";
+"music.song_unavailable.title" = "Lagu Tidak Tersedia";
+"general.end" = "Tamat";
+"general.ok" = "Ok";
+"general.error" = "Alamak! Ada ralat yang timbul.";
+"general.videos" = "Video";
+"general.start" = "Mula";

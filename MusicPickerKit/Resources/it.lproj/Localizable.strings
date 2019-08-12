@@ -1,0 +1,13 @@
+"general.addMusic" = "Aggiungi musica";
+"general.music" = "Musica";
+"music.app_open" = "Aprire app Musica";
+"music.download.description" = "La canzone che hai selezionato non è disponibile sul tuo dispositivo. Per poterla utilizzare, devi prima scaricarla sul tuo dispositivo dalla tua app musicale";
+"music.download.title" = "Scarica da iCloud";
+"music.photos.import" = "Importa da foto";
+"music.song_unavailable.description" = "La canzone che hai selezionato non può essere utilizzata poiché è protetta da DRM";
+"music.song_unavailable.title" = "Canzone non disponibile";
+"general.end" = "Fine";
+"general.ok" = "Ok";
+"general.error" = "Ahi!Si è verificato un errore.";
+"general.videos" = "Video";
+"general.start" = "Inizio";

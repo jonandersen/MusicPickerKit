@@ -1,0 +1,13 @@
+"general.addMusic" = "Muziek toevoegen";
+"general.music" = "Muziek";
+"music.app_open" = "Open Muziek-app";
+"music.download.description" = "Het liedje dat je hebt geselecteerd, is niet beschikbaar op je apparaat. Om het te gebruiken, moet je het eerst naar je apparaat downloaden via je Muziek-App";
+"music.download.title" = "Downloaden van iCloud";
+"music.photos.import" = "Importeren van foto's";
+"music.song_unavailable.description" = "Het geselecteerde liedje kan niet worden gebruikt omdat deze door DRM wordt beschermd";
+"music.song_unavailable.title" = "Liedje niet beschikbaar";
+"general.end" = "Einde";
+"general.ok" = "OK";
+"general.error" = "Oops! Er is een fout opgetreden.";
+"general.videos" = "Video's";
+"general.start" = "Begin";

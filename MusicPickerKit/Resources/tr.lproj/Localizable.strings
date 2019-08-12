@@ -1,0 +1,13 @@
+"general.addMusic" = "Müzik Ekle";
+"general.music" = "Müzik";
+"music.app_open" = "Müzik uygulamasını aç";
+"music.download.description" = "Seçtiğiniz şarkı cihazınızda bulunamadı. Kullanabilmek için ilk olarak Müzik Uygulamasından cihazınıza indirmeniz gerekli";
+"music.download.title" = "iCloud'dan indir";
+"music.photos.import" = "Fotoğraflardan içe aktar";
+"music.song_unavailable.description" = "Seçtiğiniz şarkı, Dijital Haklar Yönetimi kapsamında korunduğundan kullanılamıyor";
+"music.song_unavailable.title" = "Şarkı Kullanılamıyor";
+"general.end" = "Bitir";
+"general.ok" = "Tamam";
+"general.error" = "Hay aksi! Bir hata oluştu.";
+"general.videos" = "Videolar";
+"general.start" = "Başlat";

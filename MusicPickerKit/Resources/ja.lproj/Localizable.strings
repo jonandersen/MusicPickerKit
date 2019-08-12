@@ -1,0 +1,13 @@
+"general.addMusic" = "音楽追加";
+"general.music" = "音楽";
+"music.app_open" = "音楽アプリを開く";
+"music.download.description" = "ご選択された歌はあなたの端末からアクセスできないようです。ご利用するため、まず音楽アプリから歌をダウンロードする必要があります。";
+"music.download.title" = "iCloudからダウンロードする";
+"music.photos.import" = "写真からインポートする";
+"music.song_unavailable.description" = "ご選択された歌はデジタル著作権によって保護されているため、ご利用が不可能です";
+"music.song_unavailable.title" = "歌が使用不可能";
+"general.end" = "終了";
+"general.ok" = "OK";
+"general.error" = "エラーが発生しました";
+"general.videos" = "動画";
+"general.start" = "開始";

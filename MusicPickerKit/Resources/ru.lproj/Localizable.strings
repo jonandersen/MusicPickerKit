@@ -1,0 +1,13 @@
+"general.addMusic" = "Добавить музыку";
+"general.music" = "Музыка";
+"music.app_open" = "Открыть приложение Music";
+"music.download.description" = "Выбранная песня отсутствует на вашем устройстве. Чтобы использовать, нужно сначала скачать ее на ваше устройство из приложения Music";
+"music.download.title" = "Скачать из iCloud";
+"music.photos.import" = "Импорт из фотографий";
+"music.song_unavailable.description" = "Выбранная песня не может использоваться, потому что она защищена DRM";
+"music.song_unavailable.title" = "Песня отсутствует";
+"general.end" = "Конец";
+"general.ok" = "Ok";
+"general.error" = "Ой! Произошла ошибка.";
+"general.videos" = "Видео";
+"general.start" = "Начать";

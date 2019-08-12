@@ -1,0 +1,13 @@
+"general.addMusic" = "เพิ่มดนตรี";
+"general.music" = "เพลง";
+"music.app_open" = "เปิดแอพ Music";
+"music.download.description" = "ไม่มีเพลงที่คุณเลือกบนอุปกรณ์ของคุณ หากต้องการใช้เพลงนี้ คุณจะต้องดาวน์โหลดเพลงจาก Music App ลงในอุปกรณ์ของคุณก่อน";
+"music.download.title" = "ดาวน์โหลดจาก iCloud";
+"music.photos.import" = "นำเข้าจากภาพถ่าย";
+"music.song_unavailable.description" = "ไม่สามารถใช้เพลงที่คุณเลือก เนื่องจากมีการปกป้องจาก DRM";
+"music.song_unavailable.title" = "ไม่มีเพลง";
+"general.end" = "สิ้นสุด";
+"general.ok" = "ตกลง";
+"general.error" = "อ้าว! เกิดข้อผิดพลาดขึ้น";
+"general.videos" = "วิดีโอ";
+"general.start" = "เริ่มต้น";

@@ -1,0 +1,13 @@
+"general.addMusic" = "أضف موسيقى";
+"general.music" = "الموسيقى";
+"music.app_open" = "افتح تطبيق الموسيقى";
+"music.download.description" = "الأغنية التي حددتها غير متوفرة على جهازك. لاستخدامها, يجب أولاً تنزيلها على جهازك من تطبيق الموسيقى الخاص بك";
+"music.download.title" = "التنزيل من iCloud";
+"music.photos.import" = "الاستيراد من الصور";
+"music.song_unavailable.description" = "لا يمكن استخدام الأغنية التي حددتها لأنها محمية بواسطة إدارة الحقوق الرقمية";
+"music.song_unavailable.title" = "الأغنية غير متوفرة";
+"general.end" = "النهاية";
+"general.ok" = "حسناً";
+"general.error" = "يا إلهي! حدث خطأ غير متوقع.";
+"general.videos" = "مقاطع الفيديو";
+"general.start" = "البداية";

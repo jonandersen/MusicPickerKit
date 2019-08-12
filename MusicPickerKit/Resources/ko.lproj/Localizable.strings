@@ -1,0 +1,13 @@
+"general.addMusic" = "음악 추가";
+"general.music" = "음악";
+"music.app_open" = "음악 앱 열기";
+"music.download.description" = "선택하신 음악은 기기에서 이용할 수 없습니다. 이를 사용하려면, 우선 음악 앱에서 장치로 다운로드해야 합니다";
+"music.download.title" = "iCloud에서 다운로드";
+"music.photos.import" = "사진에서 가져오세요.";
+"music.song_unavailable.description" = "DRM이 보호한 이후로 선택하신 음악을 사용할 수 없습니다";
+"music.song_unavailable.title" = "이용할 수 없는 음악";
+"general.end" = "종료";
+"general.ok" = "네";
+"general.error" = "이런! 오류가 발생했습니다.";
+"general.videos" = "영상";
+"general.start" = "시작";

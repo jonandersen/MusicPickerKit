@@ -1,0 +1,19 @@
+strings:
+  inputs: Resources/en.lproj/Localizable.strings
+  filter: .+\.strings$
+  outputs:
+    - templateName: structured-swift4
+      output: Generated/strings.swift
+xcassets:
+  inputs:
+    - Resources/Images.xcassets
+    - Resources/Colors.xcassets
+  outputs:
+    - templateName: swift4
+      output: Generated/XCAssets.swift
+ib:
+  inputs: 
+   - Resources/Main.storyboard
+  outputs:
+    - templateName: scenes-swift4
+      output: Generated/Storyboards.swift

@@ -1,0 +1,13 @@
+"general.addMusic" = "Agregar Música";
+"general.music" = "Música";
+"music.app_open" = "Abrir aplicación de música";
+"music.download.description" = "La canción que seleccionaste no stá disponible en tu teléfono, para usarla debes descargarla en tu dispositivo desde tu aplicación de música";
+"music.download.title" = "Descargar de iCloud";
+"music.photos.import" = "Importar desde fotos";
+"music.song_unavailable.description" = "La canción que seleccionaste no puede ser usada por que está protegida por derechos de autor";
+"music.song_unavailable.title" = "Canción no disponible";
+"general.end" = "Fin";
+"general.ok" = "Ok";
+"general.error" = "¡Ups! Ocurrió un error.";
+"general.videos" = "Videos";
+"general.start" = "Comenzar";

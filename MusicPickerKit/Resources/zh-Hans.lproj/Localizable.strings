@@ -1,0 +1,13 @@
+"general.addMusic" = "添加音乐";
+"general.music" = "音乐";
+"music.app_open" = "打开音乐应用";
+"music.download.description" = "你的设备上没有已选曲目。若要继续使用，请先在音乐应用中下载";
+"music.download.title" = "从iCloud中下载";
+"music.photos.import" = "从照片导入";
+"music.song_unavailable.description" = "已选曲目受数字版权保护所以不可用";
+"music.song_unavailable.title" = "曲目不可用";
+"general.end" = "结束";
+"general.ok" = "好";
+"general.error" = "哎呀！发生错误了。";
+"general.videos" = "视频";
+"general.start" = "开始";

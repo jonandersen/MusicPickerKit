@@ -1,0 +1,13 @@
+"general.addMusic" = "添加音樂";
+"general.music" = "音樂";
+"music.app_open" = "打開音樂應用程序";
+"music.download.description" = "你選擇的歌曲不適用於你的設備。要使用它，你必須先從音樂應用下載到你的設備。";
+"music.download.title" = "從iCloud下載";
+"music.photos.import" = "從相片匯入";
+"music.song_unavailable.description" = "你選擇的歌曲由於受DRM保護而無法使用";
+"music.song_unavailable.title" = "歌曲不可用";
+"general.end" = "結束";
+"general.ok" = "好的";
+"general.error" = "發生錯誤。";
+"general.videos" = "視頻";
+"general.start" = "開始";

@@ -1,0 +1,13 @@
+"general.addMusic" = "Lägg till musik";
+"general.music" = "Musik";
+"music.app_open" = "Öppna Musik-appen";
+"music.download.description" = "Låten du valt är inte tillgängligt på din enheten. För att använda den måste du först ladda ner låten till din enhet från din Musik App";
+"music.download.title" = "Hämta från iCloud";
+"music.photos.import" = "Importera från bilder";
+"music.song_unavailable.description" = "Låten du valt kan inte användas eftersom den skyddas av DRM";
+"music.song_unavailable.title" = "Sång ej tillgänglig";
+"general.end" = "Slut";
+"general.ok" = "Ok";
+"general.error" = "Ett fel uppstod";
+"general.videos" = "Videor";
+"general.start" = "Start";
