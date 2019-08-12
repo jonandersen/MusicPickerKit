@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'VideoKit'
-  s.version          = '0.2.0'
-  s.summary          = 'A short description of VideoKit.'
+  s.name             = 'MusicPickerKit'
+  s.version          = '0.1.0'
+  s.summary          = 'A short description of MusicPickerKit.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -32,9 +32,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'Sources/**/*'
   
-  # s.resource_bundles = {
-  #   'VideoKit' => ['VideoKit/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'MusicPickerKit' => ['Resources/**/*']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'AVFoundation'
