@@ -35,7 +35,7 @@ TODO: Add long description of the pod here.
   s.resources = ['MusicPickerKit/Resources/**/*']
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'AVFoundation'
+  s.frameworks = 'AVFoundation', 'MediaPlayer', 'UIKit', 'Photos'
   s.dependency 'TLPhotoPicker'
   s.dependency 'FDWaveformView'
 end
