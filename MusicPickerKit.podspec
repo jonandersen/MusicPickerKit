@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '11.0'
 
-  s.source_files = 'Sources/**/*'
+  s.source_files = 'MusicPickerKit/Sources/**/*'
   
   s.resource_bundles = {
     'MusicPickerKit' => ['Resources/**/*']
