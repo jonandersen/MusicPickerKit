@@ -7,14 +7,33 @@
 //
 
 import UIKit
+import MusicPickerKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MusicPickerViewControllerDelegate  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let viewController = MusicPickerViewController.pickMusic(musicItems: [], delegate: self, singleMusicItem: true)
+        present(viewController, animated: true, completion: nil)
     }
 
 
+    func musicPickerViewControllerHasPremiumAccess(_ viewController: MusicPickerViewController) -> Bool {
+        return true
+    }
+    func musicPickerViewController(_ viewController: MusicPickerViewController, grantPremiumAccess: @escaping ((Bool) -> ())) {
+        grantPremiumAccess(true)
+        
+    }
+    func musicPickerViewController(_ viewController: MusicPickerViewController, didPickItems musicItems: [MusicTrackItem]) {
+        
+    }
 }
 

@@ -6,3 +6,9 @@ target 'MusicPickerKit' do
   pod 'FDWaveformView'
   pod "TLPhotoPicker"
 end
+
+
+target 'MusicPickerKit-Demo' do
+  pod 'FDWaveformView'
+  pod "TLPhotoPicker"
+end

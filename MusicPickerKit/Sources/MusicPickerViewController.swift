@@ -20,13 +20,16 @@ public class MusicPickerViewController: UIViewController {
     public weak var delegate: MusicPickerViewControllerDelegate?
     
     private var mediaImporter: MediaImporter = MediaImporter()
+    
+    public var singleMusicItem: Bool = false
 
     
-    public class func pickMusic(musicItems: [MusicTrackItem], delegate: MusicPickerViewControllerDelegate?) -> UIViewController {
+    public class func pickMusic(musicItems: [MusicTrackItem], delegate: MusicPickerViewControllerDelegate?, singleMusicItem: Bool = false) -> UIViewController {
         let navigationController = StoryboardScene.Main.initialScene.instantiate()
         let viewController = navigationController.viewControllers.first as! MusicPickerViewController
         viewController.musicItems = musicItems
         viewController.delegate = delegate
+        viewController.singleMusicItem = singleMusicItem
         return navigationController
     }
 
@@ -47,11 +50,17 @@ public class MusicPickerViewController: UIViewController {
     }
 
     func addMusicItem(musicItem: MusicTrackItem) {
-        tableView.beginUpdates()
-        let indexPath = IndexPath(row: musicItems.count, section: 0)
-        musicItems.append(musicItem)
-        tableView.insertRows(at: [indexPath], with: .automatic)
-        tableView.endUpdates()
+        if(singleMusicItem){
+            musicItems = [musicItem]
+            tableView.reloadData()
+        } else {
+            tableView.beginUpdates()
+            let indexPath = IndexPath(row: musicItems.count, section: 0)
+            musicItems.append(musicItem)
+            tableView.insertRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+        }
+       
     }
 
     @objc func cancelClicked(_: Any) {

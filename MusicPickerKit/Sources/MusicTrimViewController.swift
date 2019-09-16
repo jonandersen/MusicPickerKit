@@ -42,7 +42,13 @@ class MusicTrimViewController: UIViewController, FDWaveformViewDelegate, UIScrol
     private var url: URL?
     private var player: AVPlayer?
     private var timeObserver: AnyObject?
-    private var duration: Double = 0
+    private var duration: Double {
+        if let time = player?.currentItem?.asset.duration {
+            return CMTimeGetSeconds(time)
+        } else {
+            return 0.0
+        }
+    }
     private var currentTime: Double = 0 {
         didSet {
             let currentTime = floor(CGFloat(self.currentTime))
@@ -115,27 +121,29 @@ class MusicTrimViewController: UIViewController, FDWaveformViewDelegate, UIScrol
         waveView.isUserInteractionEnabled = false
 
         musicItem.fetchAssetUrl { [weak self] (url, error) in
+            guard let self = self else {
+                return
+            }
             if let url = url {
-                self?.url = url
-                self?.player = AVPlayer(url: url)
-                self?.waveView.audioURL = url
-                self?.configurePeriodicTimeObserving()
+                self.url = url
+                self.player = AVPlayer(url: url)
+                self.startTime = 0
+                self.endTime = self.duration
+                self.currentTime = 0
+                self.waveView.audioURL = url
+                self.configurePeriodicTimeObserving()
             } else if let error = error {
                 let errorController = createErrorController(error: error)
-                self?.present(errorController, animated: true, completion: nil)
+                self.present(errorController, animated: true, completion: nil)
             }
         }
 
     
 
         waveView.delegate = self
-        duration = musicItem.playbackDuration
-        startTime = 0
-        endTime = duration
-        currentTime = 0
-        volume = Float(trimItem.volume)
-
+        
         playing = false
+        volume = Float(trimItem.volume)
 
         playButton.setTitle(nil, for: .normal)
         playButton.tintColor = UIColor.white
@@ -235,10 +243,12 @@ class MusicTrimViewController: UIViewController, FDWaveformViewDelegate, UIScrol
             guard let self = self else {
                 return
             }
-            let currentTime = CMTimeGetSeconds(currentTime)
-            self.currentTime = currentTime
-            let width = self.waveScrollView.frame.size.width
-            self.waveScrollView.contentOffset.x = width * CGFloat(currentTime / self.duration)
+            if( self.duration > 0){
+                let currentTime = CMTimeGetSeconds(currentTime)
+                self.currentTime = currentTime
+                let width = self.waveScrollView.frame.size.width
+                self.waveScrollView.contentOffset.x = width * CGFloat(currentTime / self.duration)
+            }
         }) as AnyObject?
     }
     

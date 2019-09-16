@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0587FDFF232F0B1C00EFD459 /* MusicPickerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F1FE542300EA7800BCC5AC /* MusicPickerKit.framework */; };
+		0587FE00232F0B1C00EFD459 /* MusicPickerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05F1FE542300EA7800BCC5AC /* MusicPickerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		05F1FE592300EA7800BCC5AC /* MusicPickerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F1FE572300EA7800BCC5AC /* MusicPickerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05F1FE662300EA9C00BCC5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1FE652300EA9C00BCC5AC /* AppDelegate.swift */; };
 		05F1FE682300EA9C00BCC5AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1FE672300EA9C00BCC5AC /* ViewController.swift */; };
@@ -29,7 +31,32 @@
 		05F1FEA62300EB0C00BCC5AC /* MediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1FE972300EB0C00BCC5AC /* MediaImporter.swift */; };
 		05F1FEA72300EB0C00BCC5AC /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 05F1FE982300EB0C00BCC5AC /* swiftgen.yml */; };
 		1551CC8668AE714DE7664B69 /* Pods_MusicPickerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A330CBBDD36816BB6E6CAECB /* Pods_MusicPickerKit.framework */; };
+		6980302152C57356F9C0DDBE /* Pods_MusicPickerKit_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB5259C3B678E93F74BE10 /* Pods_MusicPickerKit_Demo.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0587FE01232F0B1C00EFD459 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05F1FE4B2300EA7800BCC5AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05F1FE532300EA7800BCC5AC;
+			remoteInfo = MusicPickerKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0587FE03232F0B1C00EFD459 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0587FE00232F0B1C00EFD459 /* MusicPickerKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		05F1FE542300EA7800BCC5AC /* MusicPickerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusicPickerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,8 +102,11 @@
 		05F1FE972300EB0C00BCC5AC /* MediaImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaImporter.swift; sourceTree = "<group>"; };
 		05F1FE982300EB0C00BCC5AC /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
 		4CB2C9AD16E1068D6A403F30 /* Pods-MusicPickerKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPickerKit.release.xcconfig"; path = "Target Support Files/Pods-MusicPickerKit/Pods-MusicPickerKit.release.xcconfig"; sourceTree = "<group>"; };
+		85DB5259C3B678E93F74BE10 /* Pods_MusicPickerKit_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicPickerKit_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A330CBBDD36816BB6E6CAECB /* Pods_MusicPickerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicPickerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B78D9157E8BEDEDF5C005E9B /* Pods-MusicPickerKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPickerKit.debug.xcconfig"; path = "Target Support Files/Pods-MusicPickerKit/Pods-MusicPickerKit.debug.xcconfig"; sourceTree = "<group>"; };
+		CA2CF717654FC7730F89A3B7 /* Pods-MusicPickerKit-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPickerKit-Demo.release.xcconfig"; path = "Target Support Files/Pods-MusicPickerKit-Demo/Pods-MusicPickerKit-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		ED540AE3B46F2F94D93ADF96 /* Pods-MusicPickerKit-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPickerKit-Demo.debug.xcconfig"; path = "Target Support Files/Pods-MusicPickerKit-Demo/Pods-MusicPickerKit-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +122,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0587FDFF232F0B1C00EFD459 /* MusicPickerKit.framework in Frameworks */,
+				6980302152C57356F9C0DDBE /* Pods_MusicPickerKit_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				A330CBBDD36816BB6E6CAECB /* Pods_MusicPickerKit.framework */,
+				85DB5259C3B678E93F74BE10 /* Pods_MusicPickerKit_Demo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -192,8 +225,9 @@
 			children = (
 				B78D9157E8BEDEDF5C005E9B /* Pods-MusicPickerKit.debug.xcconfig */,
 				4CB2C9AD16E1068D6A403F30 /* Pods-MusicPickerKit.release.xcconfig */,
+				ED540AE3B46F2F94D93ADF96 /* Pods-MusicPickerKit-Demo.debug.xcconfig */,
+				CA2CF717654FC7730F89A3B7 /* Pods-MusicPickerKit-Demo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -234,13 +268,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05F1FE742300EA9E00BCC5AC /* Build configuration list for PBXNativeTarget "MusicPickerKit-Demo" */;
 			buildPhases = (
+				2917DA94550E301FECE7569F /* [CP] Check Pods Manifest.lock */,
 				05F1FE5F2300EA9C00BCC5AC /* Sources */,
 				05F1FE602300EA9C00BCC5AC /* Frameworks */,
 				05F1FE612300EA9C00BCC5AC /* Resources */,
+				0587FE03232F0B1C00EFD459 /* Embed Frameworks */,
+				9443C946CFFBF9A192094EE7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0587FE02232F0B1C00EFD459 /* PBXTargetDependency */,
 			);
 			name = "MusicPickerKit-Demo";
 			productName = "MusicPickerKit-Demo";
@@ -327,6 +365,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2917DA94550E301FECE7569F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MusicPickerKit-Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9443C946CFFBF9A192094EE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MusicPickerKit-Demo/Pods-MusicPickerKit-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MusicPickerKit-Demo/Pods-MusicPickerKit-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MusicPickerKit-Demo/Pods-MusicPickerKit-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D8409A811D89168F83FDFD09 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +456,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0587FE02232F0B1C00EFD459 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05F1FE532300EA7800BCC5AC /* MusicPickerKit */;
+			targetProxy = 0587FE01232F0B1C00EFD459 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		05F1FE692300EA9C00BCC5AC /* Main.storyboard */ = {
@@ -560,6 +645,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MusicPickerKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -586,6 +672,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MusicPickerKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -601,6 +688,7 @@
 		};
 		05F1FE722300EA9E00BCC5AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED540AE3B46F2F94D93ADF96 /* Pods-MusicPickerKit-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -619,6 +707,7 @@
 		};
 		05F1FE732300EA9E00BCC5AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA2CF717654FC7730F89A3B7 /* Pods-MusicPickerKit-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
