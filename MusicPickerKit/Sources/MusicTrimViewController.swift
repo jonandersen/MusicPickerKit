@@ -168,6 +168,13 @@ class MusicTrimViewController: UIViewController, FDWaveformViewDelegate, UIScrol
 
         // Do any additional setup after loading the view.
     }
+    
+    override public func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(animated)
+       if #available(iOS 13.0, *) {
+          navigationController?.navigationBar.setNeedsLayout()
+       }
+    }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

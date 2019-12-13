@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0587FDFF232F0B1C00EFD459 /* MusicPickerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F1FE542300EA7800BCC5AC /* MusicPickerKit.framework */; };
 		0587FE00232F0B1C00EFD459 /* MusicPickerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05F1FE542300EA7800BCC5AC /* MusicPickerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		059676C823A323C700592F91 /* MusicPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059676C723A323C700592F91 /* MusicPickerTableViewController.swift */; };
 		05F1FE592300EA7800BCC5AC /* MusicPickerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F1FE572300EA7800BCC5AC /* MusicPickerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05F1FE662300EA9C00BCC5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1FE652300EA9C00BCC5AC /* AppDelegate.swift */; };
 		05F1FE682300EA9C00BCC5AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1FE672300EA9C00BCC5AC /* ViewController.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		059676C723A323C700592F91 /* MusicPickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPickerTableViewController.swift; sourceTree = "<group>"; };
 		05F1FE542300EA7800BCC5AC /* MusicPickerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusicPickerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05F1FE572300EA7800BCC5AC /* MusicPickerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicPickerKit.h; sourceTree = "<group>"; };
 		05F1FE582300EA7800BCC5AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				05F1FE8D2300EB0C00BCC5AC /* Generated */,
 				05F1FE912300EB0C00BCC5AC /* MusicPickerViewController.swift */,
+				059676C723A323C700592F91 /* MusicPickerTableViewController.swift */,
 				05F1FE922300EB0C00BCC5AC /* MusicPickerAddTableViewCell.swift */,
 				05F1FE932300EB0C00BCC5AC /* MusicTrimViewController.swift */,
 				05F1FE942300EB0C00BCC5AC /* MusicPickerTableViewCell.swift */,
@@ -440,6 +443,7 @@
 				05F1FEA32300EB0C00BCC5AC /* MusicPickerTableViewCell.swift in Sources */,
 				05F1FE9F2300EB0C00BCC5AC /* Storyboards.swift in Sources */,
 				05F1FEA62300EB0C00BCC5AC /* MediaImporter.swift in Sources */,
+				059676C823A323C700592F91 /* MusicPickerTableViewController.swift in Sources */,
 				05F1FE9D2300EB0C00BCC5AC /* strings.swift in Sources */,
 				05F1FE9E2300EB0C00BCC5AC /* XCAssets.swift in Sources */,
 				05F1FEA12300EB0C00BCC5AC /* MusicPickerAddTableViewCell.swift in Sources */,
