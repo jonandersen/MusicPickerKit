@@ -32,7 +32,7 @@ class ViewController: UIViewController, MusicPickerViewControllerDelegate  {
         grantPremiumAccess(true)
         
     }
-    func musicPickerViewController(_ viewController: MusicPickerViewController, didPickItems musicItems: [MusicTrackItem]) {
+    func musicPickerViewController(_ viewController: MusicPickerViewController, didPickItems musicItems: [MusicTrimmedItem]) {
         
     }
 }

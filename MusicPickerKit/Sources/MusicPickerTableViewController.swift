@@ -13,7 +13,7 @@ class MusicPickerTableViewController: UITableViewController {
     
     @IBOutlet weak var doneButton: UIBarButtonItem!
     
-    var musicItems: [MusicTrackItem] = []
+    var musicItems: [MusicTrimmedItem] = []
     weak var musicPickerDelegate: MusicPickerViewControllerDelegate?
     var singleMusicItem: Bool = false
 
@@ -33,7 +33,7 @@ class MusicPickerTableViewController: UITableViewController {
         tableView.dataSource = self
     }
 
-    func addMusicItem(musicItem: MusicTrackItem) {
+    func addMusicItem(musicItem: MusicTrimmedItem) {
         if(singleMusicItem){
             musicItems = [musicItem]
             tableView.reloadData()
@@ -137,9 +137,9 @@ class MusicPickerTableViewController: UITableViewController {
     }
     
 
-    func didEdit(musicItem: MusicTrackItem) {
-        if let existingItemIndex = musicItems.firstIndex(where: { (item: MusicTrackItem) -> Bool in
-            musicItem.trimInformation.identifier == item.trimInformation.identifier
+    func didEdit(musicItem: MusicTrimmedItem) {
+        if let existingItemIndex = musicItems.firstIndex(where: { (item: MusicTrimmedItem) -> Bool in
+            musicItem.identifier == item.identifier
         }) {
             musicItems[existingItemIndex] = musicItem
         } else {
@@ -163,7 +163,7 @@ class MusicPickerTableViewController: UITableViewController {
 
 
 extension MusicPickerTableViewController: MusicTrimViewControllerDelegate {
-    func didFinishTrimming(musicItem: MusicTrackItem) {
+    func didFinishTrimming(musicItem: MusicTrimmedItem) {
         didEdit(musicItem: musicItem)
     }
 }

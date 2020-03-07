@@ -34,17 +34,19 @@ public struct MusicTrackTrimInformation: Equatable {
     }
 }
 
-public struct MusicTrackItem: Equatable {
+public struct MusicTrimmedItem: Equatable {
     public let assset: AVURLAsset
     public let trimInformation: MusicTrackTrimInformation
-    
+    public let identifier: String
+
     public init(assset: AVURLAsset,
                 trimInformation: MusicTrackTrimInformation) {
         self.assset = assset
         self.trimInformation = trimInformation
+        self.identifier = trimInformation.identifier
     }
-    public static func == (lhs: MusicTrackItem, rhs: MusicTrackItem) -> Bool {
-        return lhs.assset == rhs.assset && lhs.trimInformation == rhs.trimInformation
+    public static func == (lhs: MusicTrimmedItem, rhs: MusicTrimmedItem) -> Bool {
+		return lhs.identifier == rhs.identifier && lhs.assset == rhs.assset && lhs.trimInformation == rhs.trimInformation
     }
 }
 

@@ -1,6 +1,6 @@
 PODS:
-  - FDWaveformView (4.0.0)
-  - TLPhotoPicker (1.9.9)
+  - FDWaveformView (5.0.1)
+  - TLPhotoPicker (2.0.11)
 
 DEPENDENCIES:
   - FDWaveformView
@@ -12,9 +12,9 @@ SPEC REPOS:
     - TLPhotoPicker
 
 SPEC CHECKSUMS:
-  FDWaveformView: b499c71c154992cee41b543ff00916a8882e696b
-  TLPhotoPicker: 95cbd6d8f66fca5a4ddd8167db5081e1ed676322
+  FDWaveformView: c188be613947273cc83d6f0056505f60e6c4b9ac
+  TLPhotoPicker: a5c339732b8326bb16cbb4e00ed01a86f2bfbbb3
 
 PODFILE CHECKSUM: 16ad86d9e92d49db5f839e470e273481124ce57e
 
-COCOAPODS: 1.8.0.beta.2
+COCOAPODS: 1.8.4
