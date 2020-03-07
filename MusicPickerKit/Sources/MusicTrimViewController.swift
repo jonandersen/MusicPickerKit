@@ -100,11 +100,8 @@ class MusicTrimViewController: UIViewController, FDWaveformViewDelegate, UIScrol
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        waveView.wavesColor = Asset.Colors.lightBackground.color
-        waveView.progressColor = Asset.Colors.darkBackground.color
-        startTimeButton.tintColor = Asset.Colors.textDark.color
-        endTimeButton.tintColor = Asset.Colors.textDark.color
-        
+        waveView.wavesColor = Asset.Colors.waveForm.color
+        waveView.progressColor = Asset.Colors.waveFormProgress.color
         
         waveScrollView.delegate = self
 
@@ -161,10 +158,12 @@ class MusicTrimViewController: UIViewController, FDWaveformViewDelegate, UIScrol
         songNameLabel.text = title
 
         startTimeButton.layer.borderWidth = 1.0
-        startTimeButton.layer.borderColor = UIColor.black.cgColor
-
+        startTimeButton.layer.borderColor = Asset.Colors.buttonBorder.color.cgColor
+        startTimeButton.tintColor = Asset.Colors.buttonBorder.color
+        
         endTimeButton.layer.borderWidth = 1.0
-        endTimeButton.layer.borderColor = UIColor.black.cgColor
+        endTimeButton.layer.borderColor =  Asset.Colors.buttonBorder.color.cgColor
+        endTimeButton.tintColor = Asset.Colors.buttonBorder.color
 
         // Do any additional setup after loading the view.
     }
@@ -212,7 +211,7 @@ class MusicTrimViewController: UIViewController, FDWaveformViewDelegate, UIScrol
 
     @IBAction func useOnTap(_: UIBarButtonItem) {
         if let url = url {
-            let trim = MusicTrackTrimInformation(value: musicItem, volume: Double(volume), start: startTime, end: endTime)
+            let trim = MusicTrackTrimInformation(value: musicItem, identifier: trimItem.identifier,  volume: Double(volume), start: startTime, end: endTime)
             delegate?.didFinishTrimming(musicItem: MusicTrackItem(assset: AVURLAsset(url: url), trimInformation: trim))
         }
         self.dismiss(animated: true, completion: nil)

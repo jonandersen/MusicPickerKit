@@ -35,7 +35,7 @@ public class MusicPickerViewController: UINavigationController, UIAdaptivePresen
     }
     
     public class func pickMusic(musicItems: [MusicTrackItem], delegate: MusicPickerViewControllerDelegate?, singleMusicItem: Bool = false) -> MusicPickerViewController {
-        let musicPickerViewController = StoryboardScene.Main.initialScene.instantiate() as! MusicPickerViewController
+        let musicPickerViewController = StoryboardScene.Main.initialScene.instantiate() 
         
         musicPickerViewController.musicPickerDelegate = delegate
         musicPickerViewController.viewController.musicItems = musicItems

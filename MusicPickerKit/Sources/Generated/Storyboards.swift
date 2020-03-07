@@ -15,9 +15,9 @@ internal enum StoryboardScene {
   internal enum Main: StoryboardType {
     internal static let storyboardName = "Main"
 
-    internal static let initialScene = InitialSceneType<UIKit.UINavigationController>(storyboard: Main.self)
+    internal static let initialScene = InitialSceneType<MusicPickerViewController>(storyboard: Main.self)
 
-    internal static let musicPickerViewController = SceneType<MusicPickerViewController>(storyboard: Main.self, identifier: "MusicPickerViewController")
+    internal static let musicPickerTableViewController = SceneType<MusicPickerTableViewController>(storyboard: Main.self, identifier: "MusicPickerTableViewController")
 
     internal static let musicTrimNavigationViewController = SceneType<UIKit.UINavigationController>(storyboard: Main.self, identifier: "MusicTrimNavigationViewController")
 

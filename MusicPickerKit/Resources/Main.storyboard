@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BfH-8U-y5j">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BfH-8U-y5j">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +21,7 @@
                                 <rect key="frame" x="82" y="120" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="478-2N-YBU" secondAttribute="height" multiplier="1:1" id="5PT-Od-uxA"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="vHZ-gL-hvY"/>
+                                    <constraint firstAttribute="width" constant="250" id="vHZ-gL-hvY"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Perth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7P-Lh-EIo">
@@ -40,10 +41,10 @@
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.80000001192092896" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dap-Js-QLG">
                                         <rect key="frame" x="-2" y="0.0" width="402" height="61"/>
+                                        <color key="tintColor" name="WaveFormProgress"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="wGJ-r7-r2s"/>
                                         </constraints>
-                                        <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="volumeChanged:" destination="lkZ-4g-Y2q" eventType="valueChanged" id="75f-fa-fbJ"/>
                                         </connections>
@@ -73,15 +74,15 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b4P-3a-7e8">
                                                         <rect key="frame" x="0.0" y="0.0" width="199" height="60"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wi4-Ro-0sX" customClass="FDWaveformView" customModule="FDWaveformView">
                                                         <rect key="frame" x="199" y="0.0" width="398" height="60"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJb-00-01E">
                                                         <rect key="frame" x="597" y="0.0" width="199" height="60"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -103,13 +104,13 @@
                                             </scrollView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6H-9i-CFq">
                                                 <rect key="frame" x="197" y="0.0" width="4" height="60"/>
-                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="4" id="p5L-W6-eCn"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="y6H-9i-CFq" firstAttribute="centerX" secondItem="fu6-hf-xQl" secondAttribute="centerX" id="23l-xg-uvs"/>
                                             <constraint firstItem="T4d-4c-Hw5" firstAttribute="top" secondItem="fu6-hf-xQl" secondAttribute="top" id="PbU-gm-hGj"/>
@@ -127,6 +128,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tn3-Wd-gW7">
                                                 <rect key="frame" x="0.0" y="0.0" width="86" height="32"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                                 <state key="normal" title="Start 00:00"/>
                                                 <connections>
@@ -136,6 +138,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ap-Xc-goN">
                                                 <rect key="frame" x="318" y="0.0" width="80" height="32"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                                 <state key="normal" title="End 03:46"/>
                                                 <connections>
@@ -158,14 +161,11 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="nAi-I4-fDJ" firstAttribute="leading" secondItem="BSE-tX-Ijs" secondAttribute="leading" constant="8" id="0MT-95-jyF"/>
                             <constraint firstItem="BSE-tX-Ijs" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="iDx-SC-0tY" secondAttribute="bottom" constant="20" id="3Tx-pl-jsX"/>
                             <constraint firstItem="iDx-SC-0tY" firstAttribute="top" secondItem="nAi-I4-fDJ" secondAttribute="bottom" constant="8" id="8a4-gj-Zok"/>
-                            <constraint firstItem="BSE-tX-Ijs" firstAttribute="bottom" secondItem="478-2N-YBU" secondAttribute="bottom" constant="492" id="9kL-LI-MDw"/>
-                            <constraint firstItem="478-2N-YBU" firstAttribute="leading" secondItem="nYQ-8g-TUZ" secondAttribute="leadingMargin" priority="750" constant="8" id="Ifh-nz-i6m"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="478-2N-YBU" secondAttribute="trailing" priority="750" constant="8" id="KkR-GW-5P6"/>
                             <constraint firstItem="BSE-tX-Ijs" firstAttribute="trailing" secondItem="nAi-I4-fDJ" secondAttribute="trailing" constant="8" id="Ool-zF-E3n"/>
                             <constraint firstItem="K7P-Lh-EIo" firstAttribute="centerX" secondItem="BSE-tX-Ijs" secondAttribute="centerX" id="QBI-h6-qDZ"/>
                             <constraint firstItem="r87-kW-uls" firstAttribute="centerY" secondItem="478-2N-YBU" secondAttribute="centerY" id="agb-hm-GIQ"/>
@@ -181,13 +181,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="MDR-He-vMB">
                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="Ukk-TA-5iI">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="closeOnTap:" destination="lkZ-4g-Y2q" id="Apb-1N-k4s"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="B6T-z3-rkN">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="useOnTap:" destination="lkZ-4g-Y2q" id="YME-rl-qKz"/>
                             </connections>
@@ -296,7 +294,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Bon Iver - Bon Iver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5Y-We-d3v">
                                                                     <rect key="frame" x="0.0" y="19.5" width="339" height="14.5"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -362,7 +360,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="xeX-w0-mvr">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="vPd-kC-7ws">
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="doneButtonOnTap:" destination="BFg-WH-EVz" id="QPz-Gb-98s"/>
                             </connections>
@@ -379,5 +376,8 @@
     </scenes>
     <resources>
         <image name="apple-music" width="64" height="64"/>
+        <namedColor name="WaveFormProgress">
+            <color red="0.0" green="0.2196078431372549" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -3,17 +3,17 @@ strings:
   filter: .+\.strings$
   outputs:
     - templateName: structured-swift4
-      output: Generated/strings.swift
+      output: Sources/Generated/strings.swift
 xcassets:
   inputs:
     - Resources/Images.xcassets
     - Resources/Colors.xcassets
   outputs:
     - templateName: swift4
-      output: Generated/XCAssets.swift
+      output: Sources/Generated/XCAssets.swift
 ib:
   inputs: 
    - Resources/Main.storyboard
   outputs:
     - templateName: scenes-swift4
-      output: Generated/Storyboards.swift
+      output: Sources/Generated/Storyboards.swift

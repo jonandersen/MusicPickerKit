@@ -12,21 +12,24 @@ import Photos
 
 public struct MusicTrackTrimInformation: Equatable {
     let value: MusicTrackValue
+    let identifier: String
     public let volume: Double
     public let start: Double?
     public let end: Double?
     
     public init(value: MusicTrackValue,
+                identifier: String,
                 volume: Double = 1.0,
                 start: Double? = nil,
                 end: Double? = nil){
+        self.identifier = identifier
         self.value = value
         self.volume = volume
         self.start = start
         self.end = end
     }
     public static func == (lhs: MusicTrackTrimInformation, rhs: MusicTrackTrimInformation) -> Bool {
-        return lhs.value.identifier == rhs.value.identifier && lhs.volume == rhs.volume &&
+        return lhs.identifier == rhs.identifier && lhs.volume == rhs.volume &&
             lhs.start == rhs.start && lhs.end == rhs.end
     }
 }
@@ -46,8 +49,6 @@ public struct MusicTrackItem: Equatable {
 }
 
 public protocol MusicTrackValue {
-    var identifier: String { get }
-    
     var playbackDuration: Double { get }
     var albumArtist: String? { get }
     var albumTitle: String? { get }
@@ -65,8 +66,6 @@ enum MusicItemError: Error {
 }
 
 extension MPMediaItem: MusicTrackValue {
-    public var identifier: String { return assetURL?.absoluteString ?? "" }
-
     public func fetchImage(size: CGSize, completionHandler: @escaping (UIImage?) -> Void) {
         let image = artwork?.image(at: size)
         completionHandler(image)
@@ -86,7 +85,6 @@ extension MPMediaItem: MusicTrackValue {
 }
 
 extension PHAsset: MusicTrackValue {
-    public var identifier: String { return localIdentifier }
     public var playbackDuration: Double { return duration }
     public var albumArtist: String? { return nil }
     public var albumTitle: String? { return nil }

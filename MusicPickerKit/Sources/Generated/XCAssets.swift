@@ -19,18 +19,17 @@
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal enum Colors {
-    internal static let darkBackground = ColorAsset(name: "DarkBackground")
-    internal static let lightBackground = ColorAsset(name: "LightBackground")
-    internal static let textDark = ColorAsset(name: "TextDark")
+    internal static let buttonBorder = ColorAsset(name: "ButtonBorder")
+    internal static let waveForm = ColorAsset(name: "WaveForm")
+    internal static let waveFormProgress = ColorAsset(name: "WaveFormProgress")
   }
   internal enum Images {
     internal static let appleMusic = ImageAsset(name: "apple-music")
-    internal static let closeBlack = ImageAsset(name: "closeBlack")
     internal static let music = ImageAsset(name: "music")
     internal static let pause = ImageAsset(name: "pause")
     internal static let photos = ImageAsset(name: "photos")
     internal static let play = ImageAsset(name: "play")
-    internal static let starSmall = ImageAsset(name: "starSmall")
+    internal static let star = ImageAsset(name: "star")
     internal static let volumeOff = ImageAsset(name: "volumeOff")
     internal static let volumeUp = ImageAsset(name: "volumeUp")
   }

@@ -128,7 +128,8 @@ class MusicPickerTableViewController: UITableViewController {
         mediaImporter.importType = .video
         let picker = mediaImporter.pick { [weak self] asset in
             if let asset = asset {
-                self?.trim(musicTrack: MusicTrackTrimInformation(value: asset))
+                self?.trim(musicTrack: MusicTrackTrimInformation(value: asset,
+                                                                 identifier: UUID().uuidString))
             }
         }
         picker.modalPresentationStyle = .overFullScreen
@@ -138,7 +139,7 @@ class MusicPickerTableViewController: UITableViewController {
 
     func didEdit(musicItem: MusicTrackItem) {
         if let existingItemIndex = musicItems.firstIndex(where: { (item: MusicTrackItem) -> Bool in
-            musicItem.trimInformation.value.identifier == item.trimInformation.value.identifier
+            musicItem.trimInformation.identifier == item.trimInformation.identifier
         }) {
             musicItems[existingItemIndex] = musicItem
         } else {
@@ -198,7 +199,7 @@ extension MusicPickerTableViewController: MPMediaPickerControllerDelegate {
                 alertController.addAction(defaultAction)
                 mediaPicker.present(alertController, animated: true, completion: nil)
             } else if let _ = mediaItem.assetURL {
-                let trimItem = MusicTrackTrimInformation(value: mediaItem)
+                let trimItem = MusicTrackTrimInformation(value: mediaItem, identifier: UUID().uuidString)
                 mediaPicker.dismiss(animated: true, completion: {
                     self.trim(musicTrack: trimItem)
                 })

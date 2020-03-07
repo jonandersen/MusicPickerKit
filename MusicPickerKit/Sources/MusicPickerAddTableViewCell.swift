@@ -18,7 +18,7 @@ class MusicPickerAddTableViewCell: UITableViewCell {
         didSet {
             let text = cellText + " "
             if isLocked {
-                addMusicLabel.set(image: Asset.Images.starSmall.image, with: text)
+                addMusicLabel.set(image: Asset.Images.star.image, with: text)
             } else {
                 addMusicLabel?.text = text
             }

@@ -30,7 +30,6 @@
 		05F1FEA42300EB0C00BCC5AC /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1FE952300EB0C00BCC5AC /* Task.swift */; };
 		05F1FEA52300EB0C00BCC5AC /* MusicItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1FE962300EB0C00BCC5AC /* MusicItem.swift */; };
 		05F1FEA62300EB0C00BCC5AC /* MediaImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F1FE972300EB0C00BCC5AC /* MediaImporter.swift */; };
-		05F1FEA72300EB0C00BCC5AC /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 05F1FE982300EB0C00BCC5AC /* swiftgen.yml */; };
 		1551CC8668AE714DE7664B69 /* Pods_MusicPickerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A330CBBDD36816BB6E6CAECB /* Pods_MusicPickerKit.framework */; };
 		6980302152C57356F9C0DDBE /* Pods_MusicPickerKit_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB5259C3B678E93F74BE10 /* Pods_MusicPickerKit_Demo.framework */; };
 /* End PBXBuildFile section */
@@ -102,7 +101,6 @@
 		05F1FE952300EB0C00BCC5AC /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		05F1FE962300EB0C00BCC5AC /* MusicItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicItem.swift; sourceTree = "<group>"; };
 		05F1FE972300EB0C00BCC5AC /* MediaImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaImporter.swift; sourceTree = "<group>"; };
-		05F1FE982300EB0C00BCC5AC /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swiftgen.yml; sourceTree = "<group>"; };
 		4CB2C9AD16E1068D6A403F30 /* Pods-MusicPickerKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPickerKit.release.xcconfig"; path = "Target Support Files/Pods-MusicPickerKit/Pods-MusicPickerKit.release.xcconfig"; sourceTree = "<group>"; };
 		85DB5259C3B678E93F74BE10 /* Pods_MusicPickerKit_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicPickerKit_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A330CBBDD36816BB6E6CAECB /* Pods_MusicPickerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicPickerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,7 +197,6 @@
 				05F1FE952300EB0C00BCC5AC /* Task.swift */,
 				05F1FE962300EB0C00BCC5AC /* MusicItem.swift */,
 				05F1FE972300EB0C00BCC5AC /* MediaImporter.swift */,
-				05F1FE982300EB0C00BCC5AC /* swiftgen.yml */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -348,7 +345,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				05F1FE9B2300EB0C00BCC5AC /* Main.storyboard in Resources */,
-				05F1FEA72300EB0C00BCC5AC /* swiftgen.yml in Resources */,
 				05F1FE9C2300EB0C00BCC5AC /* Images.xcassets in Resources */,
 				05F1FE992300EB0C00BCC5AC /* Localizable.strings in Resources */,
 				05F1FE9A2300EB0C00BCC5AC /* Colors.xcassets in Resources */,
