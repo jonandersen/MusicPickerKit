@@ -1,0 +1,13 @@
+"general.addMusic" = "הוספת מוזיקה";
+"general.music" = "מוזיקה";
+"music.app_open" = "פתח אפליקציית מוזיקה";
+"music.download.description" = "השיר שבחרת אינו זמין במכשיר שלך. כדי להשתמש בו תצטרך/י קודם להורידו למכשיר שלך מאפליקציית המוזיקה.";
+"music.download.title" = "הורדה מ-PicPlayPost";
+"music.photos.import" = "יבא מתמונות";
+"music.song_unavailable.description" = "לא ניתן להשתמש בשיר שבחרת משום שהוא מוגן על ידי DRM";
+"music.song_unavailable.title" = "השיר אינו זמין";
+"general.end" = "סיום";
+"general.ok" = "אישור";
+"general.error" = "אוי! אירעה שגיאה.";
+"general.videos" = "סרטונים";
+"general.start" = "התחל";

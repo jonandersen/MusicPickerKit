@@ -1,0 +1,13 @@
+"general.addMusic" = "Thêm nhạc";
+"general.music" = "Nhạc";
+"music.app_open" = "Mở Ứng dụng Nhạc";
+"music.download.description" = "Bài hát được chọn không có trong thiết bị của bạn. Bạn cần tải bài hát từ Ứng dụng Nhạc về thiết bị để nghe.";
+"music.download.title" = "Tải xuống từ iCloud";
+"music.photos.import" = "Nhập từ thư viện ảnh";
+"music.song_unavailable.description" = "Bài hát được chọn không khả dụng vì đang được bảo vệ bởi Quản lí Bản quyền Kĩ thuật Số.";
+"music.song_unavailable.title" = "Bài hát không khả dụng";
+"general.end" = "Kết thúc";
+"general.ok" = "Chấp nhận";
+"general.error" = "Ối! Có lỗi xảy ra.";
+"general.videos" = "Đoạn phim";
+"general.start" = "Bắt đầu";

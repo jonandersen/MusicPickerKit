@@ -59,6 +59,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0513758324C137700035D8A7 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0513758424C1377C0035D8A7 /* vi-VN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "vi-VN"; path = "vi-VN.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		059676C723A323C700592F91 /* MusicPickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPickerTableViewController.swift; sourceTree = "<group>"; };
 		05F1FE542300EA7800BCC5AC /* MusicPickerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusicPickerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05F1FE572300EA7800BCC5AC /* MusicPickerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicPickerKit.h; sourceTree = "<group>"; };
@@ -327,6 +329,8 @@
 				fr,
 				nl,
 				th,
+				he,
+				"vi-VN",
 			);
 			mainGroup = 05F1FE4A2300EA7800BCC5AC;
 			productRefGroup = 05F1FE552300EA7800BCC5AC /* Products */;
@@ -503,6 +507,8 @@
 				05F1FE892300EB0C00BCC5AC /* fr */,
 				05F1FE8A2300EB0C00BCC5AC /* nl */,
 				05F1FE8B2300EB0C00BCC5AC /* th */,
+				0513758324C137700035D8A7 /* he */,
+				0513758424C1377C0035D8A7 /* vi-VN */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
